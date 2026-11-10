@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> REHAM KARIYA </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #728E6D;
+            color: white; 
+            padding: 10px;
+        }
+
+        .navbar h1 {
+            margin: 5px 10px;
+        }
+
+        .navbar a { 
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+     
+        .hero {
+            /* FIXED PATH: Correctly points to your images folder */
+            background-image: linear-gradient(rgba(0,0,80,0.6), rgba(0,0,80,0.6)), url("images/logo.png");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 5px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin: 0 0 20px 0;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+        }
+
+        .btn { 
+            background-color: #A2AB73;
+            border: none;
+            padding: 15px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .about { 
+            /* FIXED TYPO: changed from backgroundd-color */
+            background-color: #B8CFB3;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .about h2,
+        .departments h2 {
+            color: #1A3A8F;
+            font-family: "Times New Roman", serif;
+            margin: 0 0 10px 0;
+        }
+
+        .departments {
+            text-align: center;
+            /* FIXED TYPO: changed from paddind */
+            padding: 30px 40px;
+        }
+
+        /* FIXED STRUCTURAL CSS: Created container for department cards */
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+
+        .card {
+            flex: 1;
+            min-width: 150px;
+            background-color: #84A282;
+            border: 1px solid #B8CFB3;
+            border-radius: 6px; 
+            padding: 15px;
+            font-weight: bold;
+            color: #1A3A8F;
+        }
+
+        .campus, .form-section, .contact {
+            text-align: center;
+            padding: 25px 40px;
+        }
+
+        .campus h2, .form-section h2, .contact h2 {
+            color: #1A3A8F;
+            font-family: "Times New Roman", serif;
+            margin: 0 0 10px 0;
+        }
+
+        .campus-box {
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            background-color: #DCE8F8;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .campus-box img {
+            width: 300px;
+            height: auto;
+        }
+
+        .campus-box p {
+            flex: 1;
+            color: #1A3A8F;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .form-section form { 
+            border: 2px solid #1A3A8F;
+            max-width: 700px;
+            margin: auto;
+            padding: 20px;
+            display: grid; 
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            text-align: left;
+        }
+
+        .form-section input, .form-section select {
+            padding: 6px;
+        }
+
+        .submit {
+            /* FIXED TYPO: changed from grid-coloumn */
+            grid-column: span 2;
+            /* FIXED VALUE: Fixed hexadecimal code utilizing '0' instead of 'O' */
+            background-color: #0B2A6F;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .footer {
+            /* FIXED VALUE: Fixed hexadecimal code utilizing '0' instead of 'O' */
+            background-color: #0B2A6F;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 20px;
+        }
+
+        .footer2 {
+            background-color: #728E6D;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-top: 5px solid #84A282;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1> REHAM KARIYA UNIVERSITY </h1>
+        <a href="#"> Home </a>
+        <a href="#"> About </a>
+        <a href="#"> Program </a>
+        <a href="#"> Admission </a>
+    </div>
+
+    <div class="hero">
+        <h2> Learn Today. Lead Tomorrow.</h2>
+        <p>Welcome to Reham Kariya University, Where curious minds learn new skills, explore ideas and prepare for the future</p>
+        <button class="btn"> Welcome Message </button>
+    </div>
+
+    <div class="about">
+        <h2> About Our University </h2>
+        <p> Welcome to Reham Kariya University! Our university provides quality education and helps students learn new skills. We prepare students for a bright future.</p>
+        <h3> Education Is The Key To Success </h3>
+    </div>
+
+    <div class="departments">
+        <h2> Our Departments </h2>
+        <!-- FIXED STRUCTURAL HTML: Fixed nesting issues -->
+        <div class="cards-container">
+            <div class="card"> Artificial Intelligence </div>
+            <div class="card"> Computer Science </div>
+            <div class="card"> Software Engineering </div>
+            <div class="card"> Business Administration </div>
+            <div class="card"> Information Technology</div>
+        </div>
+    </div>
+
+    <div class="campus">
+        <h2> Our Campus </h2>
+        <div class="campus-box">
+            <!-- FIXED PATH: Explicitly references your images folder -->
+            <img src="images/lab.png" alt="Computer Lab">
+            <p>A modern campus with well-equipped labs and library.</p>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2> Admission Inquiry Form </h2>
+        <form id="admForm">
+            <label for="name">Student Name: </label>
+            <input type="text" id="name">
+            
+            <label for="email">Email Address: </label>
+            <input type="text" id="email">
+            
+            <label for="gender"> Gender: </label>
+            <select id="gender">
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+            
+            <label for="program">Program: </label>
+            <select id="program">
+                <option value="">Select Program</option>
+                <option> BS Artificial Intelligence</option>
+                <option> BS Computer Science </option>
+                <option> BS Software Engineering</option>
+                <option> BBA </option>
+            </select>
+            <button type="button" class="submit" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+ 
+    <div class="contact">
+        <h2> Contact Us </h2>
+        <p> University Road, Karachi | info@rehamkariya.edu.pk | www.rehamkariya.edu.pk</p>
+    </div>
+ 
+    <div class="footer">
+        &copy; 2026 Reham Kariya University. All Rights Reserved.
+    </div>
+  
+    <div class="footer2">
+        <!-- FIXED TYPO: properly closed the h3 tag -->
+        <h3> REHAM KARIYA UNIVERSITY </h3>
+    </div>
+
+    <script>
+    function submitForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var gender = document.getElementById("gender").value;
+        var program = document.getElementById("program").value;
+     
+        if (name == "" || email == "" || gender == "" || program == "") {
+            alert("Please fill all fields!");
+        } 
+        else if (email.indexOf("@") == -1) {
+            alert("Enter a valid email address!");
+        }
+        else { 
+            alert("Thank you " + name + "! Your inquiry for " + program + " has been submitted.");
+            document.getElementById("admForm").reset();
+        }
+    }
+    </script>
+</body>
+</html>
